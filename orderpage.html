@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="order.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <i class="fa-solid fa-headphones"></i>
+        <a href="index.html" style="text-decoration: none">
+          <h4 class="logo">Soundbeam</h4></a
+        >
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link section1" href="index.html">Home</a></li>
+          <li><a class="nav-link section2" href="#">Benefits</a></li>
+          <li><a class="nav-link section3" href="#">Reviews</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <div class="side-nav">
+        <button class="logIn">
+          <i class="fa-solid fa-user"></i>
+          <span class="login-title">Log In</span>
+        </button>
+        <a class="button" href="orderpage.html">Order Now</a>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+        <div class="cart">
+          <i class="fa-solid fa-chevron-right" id="close-cart"></i>
+          <h2 class="cart-title">Cart</h2>
+          <div class="cart-content"></div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <button type="button" class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+    </header>
+    <hr class="line" />
+
+    <div class="product-section">
+      <div class="img-section">
+        <img src="/image/headphone1.png" alt="" class="headphone product-img" />
+        <img
+          src="/image/headphone2.png"
+          alt=""
+          class="headphone2 product-img"
+        />
+        <img
+          src="/image/headphone3.png"
+          alt=""
+          class="headphone3 product-img"
+        />
+      </div>
+      <div class="info-section">
+        <h2 class="headphone-title product-title">Soundbeam ERD-3083</h2>
+        <p>SKU:00001</p>
+        <br />
+        <p class="price">$299.00</p>
+        <br />
+        <p style="color: white; font-weight: bold" id="color">Color: Black</p>
+
+        <button
+          class="theme-buttons"
+          style="background-color: black"
+          id="black-headphones"
+          onclick="changeImage('/image/headphone1.png')"
+        ></button>
+        <button
+          class="theme-buttons"
+          style="background-color: white"
+          id="white-headphones"
+          onclick="changeImage('/image/headphone2.png')"
+        ></button>
+        <button
+          class="theme-buttons"
+          style="background-color: #c9c194"
+          id="gold-headphones"
+          onclick="changeImage('/image/headphone3.png')"
+        ></button>
+        <p>Quantity</p>
+        <input type="number" class="input-number" />
+        <button class="order-now add-cart">Order Now</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <ul id="accordion">
+        <li>
+          <label for="first"
+            >PRODUCT INFO <span><i class="fa-solid fa-plus"></i></span
+          ></label>
+          <input type="radio" name="accordion" id="first" checked />
+          <div class="content">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto cupiditate temporibus amet veniam. Ipsam, accusamus.
+            </p>
+          </div>
+        </li>
+        <li>
+          <label for="second"
+            >PRODUCT INFO <span><i class="fa-solid fa-plus"></i></span
+          ></label>
+          <input type="radio" name="accordion" id="second" />
+          <div class="content">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto cupiditate temporibus amet veniam. Ipsam, accusamus.
+            </p>
+          </div>
+        </li>
+        <li>
+          <label for="third"
+            >PRODUCT INFO <span><i class="fa-solid fa-plus"></i></span
+          ></label>
+          <input type="radio" name="accordion" id="third" />
+          <div class="content">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto cupiditate temporibus amet veniam. Ipsam, accusamus.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="email-section">
+      <h3 class="stay-title">Stay Connected</h3>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email*"
+        id="email-input"
+        required
+      />
+      <button class="sub">Subscribe</button>
+    </div>
+
+    <div class="modal-bg">
+      <div class="modal">
+        <h2 class="modal-title">Login</h2>
+        <p>Enter your credentials</p>
+        <input
+          type="text"
+          name="name"
+          placeholder="Username"
+          class="username"
+        />
+        <input type="email" name="email" placeholder="Email" class="email" />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="password"
+        />
+        <input
+          type="password"
+          name="email"
+          placeholder="Confirm Your Password"
+          required
+          class="confirmPassword"
+        />
+        <button class="modal-login">Login</button>
+        <i class="fa-solid fa-xmark"></i>
+        <span href="" class="signup"
+          >Dont have an account sign up
+          <a href="signup.html" class="signup-link">here</a></span
+        >
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="order.js"></script>
+  </body>
+</html>

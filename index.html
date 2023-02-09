@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="bg-img" src="bgimg.png" alt="" />
+        <div class="logo-container">
+          <i class="fa-solid fa-headphones"></i>
+          <h4 class="logo">Soundbeam</h4>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a class="nav-link section1" href="index.html">Home</a></li>
+            <li><a class="nav-link section2" href="#">Benefits</a></li>
+            <li><a class="nav-link section3" href="#">Reviews</a></li>
+          </ul>
+          <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+        <div class="side-nav">
+          <button class="logIn">
+            <i class="fa-solid fa-user"></i>
+            <span class="login-title">Log In</span>
+          </button>
+          <a class="button" href="orderpage.html">Order Now</a>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+          <div class="cart">
+            <h2 class="cart-title">Cart</h2>
+            <div class="cart-content"></div>
+            <div class="total">
+              <div class="total-title">Total</div>
+              <div class="total-price">$0</div>
+            </div>
+            <button type="button" class="btn-buy">Buy Now</button>
+            <i class="fa-solid fa-chevron-right" id="close-cart"></i>
+          </div>
+        </div>
+      </header>
+      <hr class="line" />
+      <section class="text-section">
+        <div class="text-area">
+          <h5 class="model">Soundbeam ERD-3083</h5>
+          <h1 class="title">
+            Reinventing <br />
+            Sound Experience
+          </h1>
+          <a href="orderpage.html"> <button class="order">Order Now</button></a>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-bg">
+      <div class="modal">
+        <h2 class="modal-title">Login</h2>
+        <p>Enter your credentials</p>
+        <input
+          type="text"
+          name="name"
+          placeholder="Username"
+          class="username"
+        />
+        <input type="email" name="email" placeholder="Email" class="email" />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="password"
+        />
+        <input
+          type="password"
+          name="email"
+          placeholder="Confirm Your Password"
+          required
+          class="confirmPassword"
+        />
+        <button class="modal-login">Login</button>
+        <i class="fa-solid fa-xmark"></i>
+        <span href="" class="signup"
+          >Dont have an account sign up
+          <a href="signup.html" class="signup-link">here</a></span
+        >
+      </div>
+    </div>
+
+    <div class="content">
+      <div><img class="bg-img2" src="./background.png" alt="" /></div>
+      <div class="text-sections">
+        <div class="section-one">
+          <div class="article-one">
+            <i class="fa-brands fa-soundcloud"></i>
+            <h3>High Quality Sound</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, saepe. <br />
+              Lorem ipsum dolor sit amet. br Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="section-two">
+          <div class="article-two">
+            <i class="fa-brands fa-bluetooth-b"></i>
+            <h3>Easy Wireless Listening</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, saepe. <br />
+              Lorem ipsum dolor sit amet. br Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="section-three">
+          <div class="article-three">
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <h3>Longer Battery Life</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, saepe. <br />
+              Lorem ipsum dolor sit amet. br Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="section-four">
+          <div class="article-four">
+            <i class="fa-solid fa-headphones"></i>
+            <h3>
+              Sleek <br />
+              Updated Design
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, saepe. <br />
+              Lorem ipsum dolor sit amet. br Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="music-section">
+      <div class="headphone-section">
+        <img src="/image/headphones.png" alt="" />
+      </div>
+      <div class="text-music">
+        <h1 class="music-title">
+          Music Like You've <br />
+          Never Heard Before
+        </h1>
+        <p class="music-paragraph">
+          I'm a paragraph. Click here to add your own text and edit me. It's
+          easy. <br />
+          Just click “Edit Text” or double click me to add your own content.
+        </p>
+        <a href="orderpage.html"> <button class="order">Order Now</button></a>
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="slide">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <input type="radio" name="radio-btn" id="radio4" />
+
+          <div class="sliders first">
+            <div class="mySlides">
+              <div class="title-div">
+                <h1>Reviews</h1>
+                <br>
+                <hr class="line" />
+              </div>
+              <br />
+              <p>
+                “I'm a testimonial. Click to edit me and <br />
+                add text that says something nice about <br />
+                you and your services.”
+              </p>
+              <br />
+              <p class="author">Rene Jordan</p>
+            </div>
+          </div>
+          <div class="sliders">
+            <div class="mySlides">
+              <div class="title-div">
+                <h1>Reviews</h1>
+                <br>
+                <hr class="line" />
+              </div>
+              <br />
+              <p>
+                “I'm a testimonial. Click to edit me and <br />
+                add text that says something nice about <br />
+                you and your services.”
+              </p>
+              <br />
+              <p class="author">Sam Mathews</p>
+            </div>
+          </div>
+          <div class="sliders">
+            <div class="mySlides">
+              <div class="title-div">
+                <h1>Reviews</h1>
+                <br>
+                <hr class="line" />
+              </div>
+              <br />
+              <p>
+                “I'm a testimonial. Click to edit me and <br />
+                add text that says something nice about <br />
+                you and your services.”
+              </p>
+              <br />
+              <p class="author">DJ Nini</p>
+            </div>
+          </div>
+         
+    
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+           
+          </div>
+        </div>
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        
+        </div>
+      </div>
+    
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
