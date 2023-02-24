@@ -234,7 +234,6 @@ p {
 .cart.active {
   right: 0;
 }
-
 .cart-title {
   text-align: center;
   font-size: 1.5rem;
@@ -245,7 +244,7 @@ p {
   display: grid;
   grid-template-columns: 32% 50% 18%;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   margin-top: 1rem;
 }
 .cart-img {
@@ -266,39 +265,46 @@ p {
   font-weight: 500;
 }
 .cart-quantity {
-  border: 1px solid var(--text-color);
-  outline-color: var(--main-color);
-  width: 2.4rem;
+  width: 50px;
   text-align: center;
   font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
 }
 .cart-remove {
-  font-size: 24px;
-  color: var(--main-color);
+  font-size: 15px;
   cursor: pointer;
+  margin-top: -90px;
+  color: gray;
+}
+.cart-remove:hover {
+  color: whitesmoke;
 }
 .total {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 1.5rem;
+  flex-direction: column;
+  margin-top: 10px
 }
 .total-title {
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 600;
+  margin-top: 20px
 }
 .total-price {
-  margin-left: 0.5rem;
+  font-size: 18px;
 }
 .btn-buy {
   display: flex;
-  margin: 1.5rem auto 0 auto;
-  padding: 12px 20px;
+  padding: 10px 50px;
   border: none;
   background-color: #d0b48f;
-  color: var(--bg-color);
-  font-size: 1.5rem;
+  color: black;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  margin-top: 100px;
+  margin-left: 100px;
 }
 #close-cart {
   position: absolute;
@@ -353,12 +359,18 @@ p {
 }
 .theme-buttons {
   display: inline-flex;
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   margin: 0px 2px;
   cursor: pointer;
   border: none;
+}
+.theme-buttons:hover {
+  border: 3px solid white;
+}
+#white-headphones:hover {
+  border: 3px solid black;
 }
 .order-now {
   display: block;
@@ -511,6 +523,57 @@ p {
 .signup-link {
   color: black;
 }
+.popup {
+  z-index: 6;
+  width: 400px;
+  background-color: #585858;
+  border-radius: 6px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+  visibility: visible;
+  top: 100%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup h2,
+p {
+  color: white;
+  font-weight: bolder;
+}
+.popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: boder;
+  margin: 30px 0 10px;
+}
+.popup button {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #d0b48f;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;  
+}
+
 @keyframes spin {
   100% {
     rotate: 1turn;

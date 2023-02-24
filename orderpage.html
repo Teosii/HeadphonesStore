@@ -49,14 +49,16 @@
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
         <div class="cart">
-          <i class="fa-solid fa-chevron-right" id="close-cart"></i>
-          <h2 class="cart-title">Cart</h2>
+          <div class="top-cart">
+            <i class="fa-solid fa-chevron-right" id="close-cart"></i>
+            <h2 class="cart-title">Cart</h2>
+          </div>
           <div class="cart-content"></div>
           <div class="total">
-            <div class="total-title">Total</div>
+            <div class="total-title">Subtotal</div>
             <div class="total-price">$0</div>
           </div>
-          <button type="button" class="btn-buy">Buy Now</button>
+          <button type="button" class="btn-buy">View Cart</button>
         </div>
       </div>
     </header>
@@ -64,16 +66,18 @@
 
     <div class="product-section">
       <div class="img-section">
-        <img src="/image/headphone1.png" alt="" class="headphone product-img" />
+        <img src="/image/headphone1.png" alt="" class="headphone product-img" id="product-id" />
         <img
           src="/image/headphone2.png"
           alt=""
           class="headphone2 product-img"
+          id="product-id"
         />
         <img
           src="/image/headphone3.png"
           alt=""
           class="headphone3 product-img"
+          id="product-id"
         />
       </div>
       <div class="info-section">
@@ -103,7 +107,7 @@
           onclick="changeImage('/image/headphone3.png')"
         ></button>
         <p>Quantity</p>
-        <input type="number" class="input-number" />
+        <input type="number" class="input-number" value="1" />
         <button class="order-now add-cart">Order Now</button>
         <button class="buy-now">Buy Now</button>
       </div>
@@ -159,7 +163,13 @@
         id="email-input"
         required
       />
-      <button class="sub">Subscribe</button>
+      <button class="sub" onclick="openPopup()">Subscribe</button>
+      <div class="popup" id="popup">
+        <img src="/image/404-tick.png" alt="" />
+        <h2>Thank You!</h2>
+        <p>Your details has been successfully submitted. Thanks!</p>
+        <button type="button" onclick="closePopup()">OK</button>
+      </div>
     </div>
 
     <div class="modal-bg">

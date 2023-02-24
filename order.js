@@ -20,31 +20,6 @@ const navSlider = () => {
 };
 navSlider();
 
-function smoothScroll(target, duration) {
-  var target = document.querySelector(target);
-  var targetPosition = target.getBoundingClientRect().top;
-  var startPosition = window.pageYOffset;
-  var distance = targetPosition - startPosition;
-  var startTime = null;
-
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    var TimeElapsed = currentTime - startTime;
-    var run = ease(TimeElapsed, startPosition, distance, duration);
-    window.scrollTo(0, run);
-    if (TimeElapsed < duration) requestAnimationFrame(animation);
-  }
-
-  function ease(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  }
-
-  requestAnimationFrame(animation);
-}
-
 var section = document.querySelector(".section2");
 var section2 = document.querySelector(".content");
 section.addEventListener("click", function () {
@@ -159,6 +134,7 @@ function quantityChanged(event) {
   }
   updateTotal();
 }
+
 function addCartClicked(event) {
   var button = event.target;
   var shopProducts = button.parentElement;
@@ -173,27 +149,33 @@ function addCartClicked(event) {
     productImg = "/image/headphone3.png";
   }
 
+  const product = document.getElementsByClassName("product-id").value;
+  const quantity = parseInt(
+    document.getElementsByClassName("input-number").value
+  );
+
+  if (cart.hasOwnProperty(product)) {
+    // If the item is already in the cart, increase the quantity
+    cart[product] += quantity;
+  } else {
+    // If the item is not yet in the cart, add it with the specified quantity
+    cart[product] = quantity;
+  }
   addProductToCart(title, price, productImg);
   updateTotal();
+  updateDisplay();
 }
 function addProductToCart(title, price, productImg) {
   var cartShopBox = document.createElement("div");
   cartShopBox.classList.add("cart-box");
   var cartItems = document.getElementsByClassName("cart-content")[0];
-  var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
-  for (var i = 0; i < cartItemsNames.length; i++) {
-    if (cartItemsNames[i].innerText == title) {
-      alert("You have already add this item to your cart");
-      return;
-    }
-  }
   var cartBoxContent = `     <img src="${productImg}" alt="" class="cart-img">
                         <div class="detail-box">
                             <div class="cart-product-title">${title}</div>
                             <div class="cart-price">${price}</div>
-                            <input type="number" value="1" class="cart-quantity">
+                            <input type="number" value='1'  class="cart-quantity">
                         </div>
-                        <i class="fa-regular fa-trash-can cart-remove"></i>`;
+                       <i class="fa-solid fa-circle-xmark cart-remove"></i>`;
   cartShopBox.innerHTML = cartBoxContent;
   cartItems.append(cartShopBox);
   cartShopBox
@@ -204,6 +186,16 @@ function addProductToCart(title, price, productImg) {
     .addEventListener("change", quantityChanged);
 }
 
+function updateDisplay() {
+  const cartDisplay = document.getElementsByClassName("cart-content");
+  cartDisplay.innerHTML = "";
+
+  for (const [product, quantity] of Object.entries(cart)) {
+    const item = document.createElement("div");
+    item.innerText = `${product}: ${quantity}`;
+    cartDisplay.appendChild(item);
+  }
+}
 function updateTotal() {
   var cartContent = document.getElementsByClassName("cart-content")[0];
   var cartBoxes = cartContent.getElementsByClassName("cart-box");
@@ -218,4 +210,12 @@ function updateTotal() {
   }
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+}
+
+let popup = document.getElementById("popup");
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+function closePopup() {
+  popup.classList.remove("open-popup");
 }
